@@ -4,10 +4,15 @@ import { TodoForm } from "./components/TodoForm";
 import { TodoList } from "./components/TodoList";
 
 export default function App() {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(() => {
+    const localValue = localStorage.getItem("ITEMS");
+    if (localValue == null) return [];
+
+    return JSON.parse(localValue);
+  });
 
   useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
+    localStorage.setItem("ITEMS", JSON.stringify(todos));
   }, [todos]);
 
   function addTodo(title) {
