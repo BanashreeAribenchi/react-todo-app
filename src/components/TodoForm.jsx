@@ -23,7 +23,7 @@ export const TodoForm = ({ onSubmit }) => {
           id="item"
         />
       </div>
-      <button className="btn">+Add+</button>
+      <button className="btn">+ Add +</button>
     </form>
   );
 };

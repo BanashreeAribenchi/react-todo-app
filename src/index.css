@@ -1,4 +1,4 @@
-/* * {
+* {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
@@ -6,15 +6,47 @@
 body {
   background: #333;
   color: hsl(200, 100%, 90%);
-  max-width: 400px;
+  width: 100%;
   padding: 1rem;
   margin: 0 auto;
 }
 
-.new-item-form {
+#header-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(200, 100%, 30%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+}
+
+#main-section {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer-section {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(200, 100%, 30%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+}
+
+.new-item-form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 30%;
 }
 
 .form-row {
@@ -137,4 +169,4 @@ body {
 
 .list li:has(input:checked) label:hover::before {
   background: hsl(200, 100%, 30%);
-} */
+}

@@ -44,9 +44,21 @@ export default function App() {
   }
   return (
     <>
-      <TodoForm onSubmit={addTodo} />
-      <h2 className="header">Todo List</h2>
-      <TodoList todos={todos} toggleTodo={toggleTodo} deleteToDo={deleteToDo} />
+      <div id="header-section">
+        <h1>Things to be Done!!!</h1>
+      </div>
+      <div id="main-section">
+        <TodoForm onSubmit={addTodo} />
+        <h2 className="header">Todo List</h2>
+        <TodoList
+          todos={todos}
+          toggleTodo={toggleTodo}
+          deleteToDo={deleteToDo}
+        />
+      </div>
+      <div id="footer-section">
+        <h3>Coded with Passion by Banashree Aribenchi</h3>
+      </div>
     </>
   );
 }
